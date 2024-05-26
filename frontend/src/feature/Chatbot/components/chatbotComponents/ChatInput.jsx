@@ -19,7 +19,7 @@ const ChatInput = ({ sendButtonPressed, isNextChatLoading }) => {
             placeholder="Ask me anything..."
             className="resize-none px-4 max-h-[40vh] grow border-none rounded-xl focus:outline-none border-transparent focus:ring-0 overflow-x-hidden"
           />
-          <AudioRecorder onStopRecording={sendButtonPressed}></AudioRecorder>
+          <AudioRecorder />
           <button
             size="icon"
             variant="secondary"

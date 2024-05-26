@@ -20,7 +20,7 @@ const Intro = ({ open, setOpen }) => {
 
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent>
+      <AlertDialogContent className="max-w-[380px]">
         <AlertDialogHeader className="flex flex-col">
           <AlertDialogTitle className="text-[34px] text-center">
             Meet Shane!
@@ -28,8 +28,8 @@ const Intro = ({ open, setOpen }) => {
           <Image
             src="/images/persona.svg"
             alt="writing"
-            width={250}
-            height={250}
+            width={150}
+            height={150}
             className="mx-auto"
           />
           <p>
