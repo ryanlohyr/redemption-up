@@ -5,11 +5,10 @@ import { AppProvider } from "./Context/store";
 import Navbar from "@/components/Navbar";
 import Chatbot from "@/feature/Chatbot/components/Chatbot";
 import { Providers } from "@/lib/providers";
+const poppins = Poppins({ subsets: ["latin"], weight:['400','300','600','700'] });
+import MinimumScreen from "@/app/minimumScreen/page";
+import SizeChecker from "./minimumScreen/SizeChecker";
 import Intro from "@/components/Intro";
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "300", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,13 +24,17 @@ export default function RootLayout({
       <html lang="en">
         <body className={poppins.className}>
           <AppProvider>
-            <div className="">
-              <div className="h-full mb-28">{children}</div>
-              <div className="fixed bottom-[90px] right-8 z-50">
-                <Chatbot />
+            <SizeChecker>
+              <div className="">
+                <div className="min-h-screen mb-24">
+                  {children}
+                </div>
+                <div className="fixed bottom-[90px] right-8 z-50">
+                  <Chatbot/>
+                </div>
+                <Navbar/>
               </div>
-              <Navbar />
-            </div>
+            </SizeChecker>
           </AppProvider>
         </body>
       </html>

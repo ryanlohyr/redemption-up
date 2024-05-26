@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const FinanceResults = () => {
   return (
-    <div className='px-5 pb-4 z-0'>
+    <div className='px-6 pb-4 z-0'>
             <div className='flex items-center w-full'>
                 <div className='font-semibold text-3xl mr-3'>Results</div>
                 <div className="flex-grow border-b border-gray-700"></div>
@@ -49,7 +49,7 @@ const FinanceResults = () => {
                             <div className="flex items-center justify-end">
                                 <div className="flex items-center">
                                     <IoHeartCircle size={35}/>
-                                    <Link href={`/finance/${plan.id}`}>
+                                    <Link href={`/roadmapFinance/${plan.id}`}>
                                         <PiArrowCircleDownRightFill size={35}/>
                                     </Link>
                                 </div>
