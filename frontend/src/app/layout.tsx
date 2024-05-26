@@ -6,8 +6,7 @@ import Navbar from "@/components/Navbar";
 import Chatbot from "@/feature/Chatbot/components/Chatbot";
 import { Providers } from "@/lib/providers";
 const poppins = Poppins({ subsets: ["latin"], weight:['400','300','600','700'] });
-import MinimumScreen from "@/app/minimumScreen/page";
-import SizeChecker from "./minimumScreen/SizeChecker";
+// import SizeChecker from "./minimumScreen/SizeChecker";
 import Intro from "@/components/Intro";
 
 export const metadata: Metadata = {
@@ -24,7 +23,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={poppins.className}>
           <AppProvider>
-            <SizeChecker>
+            {/* <SizeChecker> */}
               <div className="">
                 <div className="min-h-screen mb-24">
                   {children}
@@ -34,7 +33,7 @@ export default function RootLayout({
                 </div>
                 <Navbar/>
               </div>
-            </SizeChecker>
+            {/* </SizeChecker> */}
           </AppProvider>
         </body>
       </html>
